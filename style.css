@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Work Sans", sans-serif;
+    overflow: hidden;
+}
+
+.accordion{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.bg-pattern-img{
+    width: 100vw;
+    height: 35vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-pattern-color{
+    background-color: hsl(275, 100%, 97%);
+    height: 65vh;
+    width: 100vw;
+}
+.box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: hsl(0, 0%, 100%);
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+.faq{
+    display: flex;
+}
+.faqhead{
+    font-weight: 700;
+    font-size: 40px;
+    padding-left: 10px;
+}
+.question{
+    padding: 10px 0;
+    color: hsl(292, 42%, 14%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    cursor: pointer; 
+}
+.icon {
+    width: 25px;
+    height: 25px;
+    min-width: 25px;
+    min-height: 25px;
+    object-fit: contain;
+    display: block;
+}
+
+.answer{
+    padding: 10px 0;
+    color: hsl(292, 16%, 49%);
+    display: none;
+}
+.box > *:nth-child(3) {
+    display: block;
+}
+.line{   
+    margin: 5px 0;
+    border: 0.1% solid hsl(292, 16%, 49%);
+}
+
+@media (max-width: 767px) {
+    .bg-pattern-img{
+        background-image: url("background-pattern-mobile.svg");
+    }
+    .box{
+        padding: 15px;
+        width: 285px;
+    }
+}
+
+
+/* laptops and Large Desktops */
+@media (min-width: 1024px) {
+    .bg-pattern-img{
+        background-image: url("background-pattern-desktop.svg");
+    }
+    .box{
+        padding: 30px;
+        width: 535px;
+    } 
+}
